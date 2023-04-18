@@ -42,7 +42,7 @@ ul {
 li, h3 {
   list-style:none;
 }
-input,button{
+input, button{
   outline:none;
 }
 button {
@@ -59,7 +59,7 @@ button:hover {
 }
 /* Heading */
 h3,
-label[for='new-task'] {
+label[for="new-task"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -85,11 +85,11 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-label[for='new-task'] {
+label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+input #new-task {
   width: 318px;
 }
 
@@ -116,34 +116,34 @@ li > label {
   font-size: 18px;
   width: 226px;
 }
-li >    input[type="text"] {
+li > input[type="text"] {
     width: 226px
 }
-button.delete img {
+button .delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+button .delete img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+ul #completed-tasks label {
   text-decoration: line-through
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+ul li input[type="text"] {
   display:none
 }
 
-ul li.editMode input[type=text] {
+ul li .editMode input[type="text"] {
   display:inline-block;
   width:224px
 }
 
-ul li.editMode label {
+ul li .editMode label {
   display:none;
 }
