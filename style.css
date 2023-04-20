@@ -42,7 +42,7 @@ input, button{
 .add-block__task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 .add-block__wrapper {
   display: flex;
@@ -126,7 +126,7 @@ input, button{
   width: 226px;
 } 
 .input-task {
-  width: 226px
+  width: 226px;
 }
 .delete .delete__img {
   height: 2em;
@@ -138,14 +138,14 @@ input, button{
 }
 /* Completed */
 .main__complet-block .main__task-label {
-  text-decoration: line-through
+  text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 .edit-mode .input-task {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .edit-mode .main__task-label {
