@@ -132,7 +132,7 @@ input, button{
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete .delete__img:hover {
+.delete__img:hover {
   transform: rotateZ(0);
 }
 /* .input-task_active {
