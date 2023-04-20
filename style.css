@@ -9,10 +9,10 @@ ul {
   padding: 0px;
 }
 li, h3 {
-  list-style:none;
+  list-style: none;
 }
 input, button{
-  outline:none;
+  outline: none;
 }
 .header {
   width: 500px;
@@ -86,7 +86,7 @@ input, button{
   display: none;
 }
 .add-block__task:focus,
-.input-task{
+.input-task {
   color: #333;
 }
 
@@ -126,7 +126,7 @@ input, button{
   width: 226px;
 } 
 .input-task {
-    width: 226px
+  width: 226px
 }
 .delete .delete__img {
   height: 2em;
@@ -144,10 +144,10 @@ input, button{
 
 /* Edit Task */
 .edit-mode .input-task {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .edit-mode .main__task-label {
-  display:none;
+  display: none;
 }
