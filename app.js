@@ -10,7 +10,7 @@
 
 var taskInput=document.getElementById("add-task");//Add a new task.
 var addButton=document.querySelector(".add-block__btn");//first button
-var incompleteTaskHolder=document.getElementById("active-tasks");//ul of #incompleteTasks
+var incompleteTaskHolder=document.getElementById("active-block__tasks");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("complet-tasks");//completed-tasks
 
 
@@ -18,6 +18,7 @@ var completedTasksHolder=document.getElementById("complet-tasks");//completed-ta
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
+    listItem.className = "active-block__task task";
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -33,19 +34,21 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task';
+    label.className="main__task-label";
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className = "input-checkbox";
     editInput.type="text";
-    editInput.className="task";
+    editInput.className="input-task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="edit button";
 
     deleteButton.className="delete button";
-    deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.src="./remove.svg";
     deleteButton.alt = "Icon delete";
+    deleteButtonImg.className = "delete__img";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -123,6 +126,8 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
+    listItem.classList.add("complet-block__task");
+    listItem.classList.remove("active-block__task");
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -135,6 +140,8 @@ var taskIncomplete=function(){
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
+    listItem.classList.remove("complet-block__task");
+    listItem.classList.add("active-block__task");
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }
@@ -157,7 +164,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector("input[type=checkbox]");
+    var checkBox=taskListItem.querySelector(".input-checkbox");
     var editButton=taskListItem.querySelector(".edit");
     var deleteButton=taskListItem.querySelector(".delete");
 
