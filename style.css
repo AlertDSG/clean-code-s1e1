@@ -28,9 +28,11 @@ input, button{
 }
 
 @media (max-width:768px) {
-.header { 
-  text-align: center;
-}
+
+  .header { 
+    text-align: center;
+  }
+
 }
 .main {
   display: block;
@@ -106,7 +108,6 @@ input, button{
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,9 +136,6 @@ input, button{
 .delete__img:hover {
   transform: rotateZ(0);
 }
-/* .input-task_active {
-  display:block
-} */
 /* Completed */
 .main__complet-block .main__task-label {
   text-decoration: line-through
